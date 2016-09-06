@@ -1,0 +1,59 @@
+<form ng-submit='ctrl.register($event)'>
+<!-- Контактная информация -->
+<section class='reg-info-block'>
+  <div class='info-block-data'>
+
+    <div class='data-row'>
+      <label>Фамилия</label>
+      <input type='text' ng-class="{'input-error':ctrl.regErrors.user_surname}" ng-blur='ctrl.validate(["user_surname"])' ng-model='newUser.user_surname' name='user_surname' class='input-long' placeholder="Фамилия" maxlength='100' ></input>
+      <label class="e-input-error e-input-error--left" for="" ng-repeat="error in ctrl.regErrors.user_surname">{{error}}</label>
+    </div>
+    <div class='data-row'>
+      <label>Имя</label>
+      <input type='text' ng-class="{'input-error':ctrl.regErrors.user_name}" ng-blur='ctrl.validate(["user_name"])' ng-model='newUser.user_name'  name='user_name' class='input-long' placeholder="Имя" maxlength='100' ></input>
+      <label class="e-input-error e-input-error--left" for="" ng-repeat="error in ctrl.regErrors.user_name">{{error}}</label>
+    </div>
+    <div class='data-row'>
+      <label>Отчество</label>
+      <input type='text' ng-class="{'input-error':ctrl.regErrors.user_patronymic}" ng-blur='ctrl.validate(["user_patronymic"])' ng-model='newUser.user_patronymic' name='user_patronymic' class='input-long' maxlength='100' placeholder="Отчество"></input>
+      <label class="e-input-error e-input-error--left" for="" ng-repeat="error in ctrl.regErrors.user_patronymic">{{error}}</label>
+    </div>
+    <div class='data-row'>
+      <label>Email</label>
+      <input type='text' ng-class="{'input-error':ctrl.regErrors.user_email}" ng-blur='ctrl.validate(["user_email"])' ng-model='newUser.user_email'  name='user_email' class='input-long' placeholder="E-mail" ></input>
+      <label class="e-input-error e-input-error--left" for="" ng-repeat="error in ctrl.regErrors.user_email">{{error}}</label>
+    </div>
+    <div class='data-row'>
+      <label>Номер телефона</label>
+      <input type='phone' ng-class="{'input-error':ctrl.regErrors.user_phone_number}" placeholder="+7(999) 999-99-99" ng-blur='ctrl.validate(["user_phone_number"])' ng-model='newUser.user_phone_number' name='user_phone_number' class='input-long' ></input>
+      <label class="e-input-error e-input-error--left" for="" ng-repeat="error in ctrl.regErrors.user_phone_number">{{error}}</label>
+    </div>
+
+    <div class='data-row'>
+      <label>Пароль</label>
+      <input type='password' ng-class="{'input-error':ctrl.regErrors.user_password}" ng-blur='ctrl.validate(["user_password"])'ng-model='newUser.user_password'  name='user_password' maxlength='255' class='input-long' placeholder="Пароль"></input>
+      <label class="e-input-error e-input-error--left" for="" ng-repeat="error in ctrl.regErrors.user_password">{{error}}</label>
+    </div>
+    <div class='data-row'>
+      <label>Повторите пароль</label>
+      <input type='password' ng-class="{'input-error':ctrl.regErrors.user_password_repeat}" ng-blur='ctrl.validate(["user_password_repeat"])' ng-model='newUser.user_password_repeat' name='user_password_repeat' class='input-long' placeholder="Повторите пароль"></input>
+      <label class="e-input-error e-input-error--left" for="" ng-repeat="error in ctrl.regErrors.user_password_repeat">{{error}}</label>
+    </div>
+  </div>
+</section>
+
+<!-- Подтверждение -->
+<section class='reg-info-block'>
+  <div class='info-block-data'>
+    <div class='checkbox-row'>
+      <input type='checkbox' ng-model='newUser.rules_confirm' ng-class="{'input-error':newUser.rules_confirm}" >
+      <label> С <a href='#'> Условиями использования</a> сервиса и <a href='#'> Политикой конфиденциальности</a> ознакомлен. Даю согласие на обработку персональных данных.
+      </label>
+      <label class="e-input-error" for="" ng-repeat="error in ctrl.regErrors.rules_confirm">{{error}}</label>
+    </div>
+    <div class='button-row'>
+      <button type="submit" class='standard-button'>Отправить</button>
+    </div>
+  </div>
+</section>
+</form>

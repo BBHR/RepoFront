@@ -1,0 +1,21 @@
+<input type='text' style='display:inline-block;' class='item-title' placeholder='{{selectedItem.name ? selectedItem.name : placeholder}}' ng-model='filterText' ng-change='filterCategories()' ng-show='dd'>
+<span ng-click='showDropDown()' style='display:inline-block;' class='item-title' ng-show='!dd'>{{selectedItem.name ? selectedItem.name : placeholder}} </span>
+  <span class='arrow' ng-click='toggleDropDown()' ng-class='{active: dd}'></span>
+  <ul class='drop-list' ng-if='getCategories()' ng-show='dd && canShow()'>
+    <li ng-repeat='(name,category) in getCategories()'>
+      <ul class='drop-list__category'>{{name}}
+        <li class='drop-list__item' ng-click='select(item)' ng-repeat='item in category'>
+          <a >{{item.name}}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul class='drop-list' ng-if='!getCategories()' ng-show='dd && canShow()'>
+    <li >
+      <ul class='drop-list__category'>
+        <li class='drop-list__item' ng-click='select(item)' ng-repeat='item in getItems()'>
+          <a>{{item.name}}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>

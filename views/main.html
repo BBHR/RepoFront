@@ -1,0 +1,70 @@
+<div class="select">
+    <select-box bind='selectedMark' ng-focus='showDropDown()' ng-blur='hideDropDown()' items='marks' placeholder='Выберите марку' categories='true' ng-click='focus()'></select-box>
+    <select-box bind='selectedWork' ng-focus='showDropDown()' ng-blur='hideDropDown()' items='workTypes' placeholder='Вид работ' ng-click='focus()'></select-box>
+    <div class="select-box">
+        <input class="standard-button" type="button" value="Найти" ng-click='root.unhandled()'>
+        <a ng-click='root.unhandled()'>Расширенный поиск</a>
+    </div>
+</div>
+<section class="instruction">
+    <div class="instruction-box1">
+        <h2>Как это <span>работает</span>!</h2>
+        <p>3 простых шага для поиска лучшего автосервиса</p>
+    </div>
+    <div class="instruction-box2 clearfix">
+        <div class="instruction-note col-md-4 col-sm-6">
+            <div class="istruction-content">
+                <span>1</span>
+                <p>Введите марку своего автомобиля и вид работ.</p>
+                <div class="img-content img-content1"></div>
+            </div>
+        </div>
+        <div class="instruction-note col-md-4 col-sm-6">
+            <div class="istruction-content">
+                <span>2</span>
+                <p>Выберете из предложенных вариантов ближайший автосервис.</p>
+                <div class="img-content img-content2"></div>
+            </div>
+        </div>
+        <div class="instruction-note col-md-4 col-sm-12">
+            <div class="istruction-content">
+                <span>3</span>
+                <p>Запишитесь на ремонт в удобное для вас время.</p>
+                <div class="img-content img-content3"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="servises clearfix">
+    <div class="servises-box1">
+        <h2>В чём <span>преимущества</span> BiBiHelper!</h2>
+        <p>Удобный. Быстрый. Простой</p>
+    </div>
+    <div class="servises-box2">
+        <div class="servises-content">
+
+            <p>Удобный поиск среди сотен компаний в рамках одного сайта</p>
+            <p>Обслуживание своего автомобиля во всех компаниях через единый личный кабинет</p>
+            <p>Хранение истории ремонта и ранее просмотренных предложений</p>
+            <p>Сравнение цен на услуги по ремонту автомобиля</p>
+            <p>Онлайн запись в автосервис и получение консультации от экспертов</p>
+            <p>Уведомление об акциях и скидках от компаний-партнёров</p>
+        </div>
+    </div>
+</section>
+<section class="now-search">
+    <h2>Сейчас <span>ищут</span></h2>
+    <p>Текущие онлайн запросы в BiBiHelper</p>
+    <ul>
+        <li><span class="now-search-left">BMW X6</span> <span class="now-search-right">&#8250; Ремонт КПП</span></li>
+        <li><span class="now-search-left">Chevrolet Cruze</span> <span class="now-search-right">&#8250; Кузовной ремонт</span></li>
+        <li><span class="now-search-left">Mitsubishi Lancer</span> <span class="now-search-right">&#8250; Экспресс замена масла</span></li>
+        <li><span class="now-search-left">Renault Clio</span> <span class="now-search-right">&#8250; Замена колодок</span></li>
+        <li><span class="now-search-left">Citroen C4</span> <span class="now-search-right">&#8250; Аэрография</span></li>
+    </ul>
+    <div class="now-search-button">
+        <input type="button" class="now-search-button1" value="Найти автосервис" ng-click='root.unhandled()'>
+        <span>или</span>
+        <input type="button" class="now-search-button2" value="Расширенный поиск" ng-click='root.unhandled()'>
+    </div>
+</section>

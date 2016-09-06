@@ -1,0 +1,10 @@
+<section class="reg-info-block">
+    <div class='data-row restore-block'>
+      <form ng-submit='ctrl.restore()'>
+        <label>Email</label>
+        <input type='text' ng-model='ctrl.email' ng-blur="ctrl.validate('email')"ng-class="{'input-error':ctrl.errors.user_email}" name='user_email' class='e-input input-long'></input>
+        <label class="e-input-error" style="margin-left:100px;" ng-repeat="error in ctrl.errors.user_email track by $index">{{error}}</label>
+        <button type="submit" class='standard-button'>Отправить</button>
+      </form>
+    </div>
+</section>
